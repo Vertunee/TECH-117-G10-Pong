@@ -7,7 +7,8 @@
   <title>Pong Game</title>
 
   <!-- Prism.js syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
@@ -34,7 +35,6 @@
     </ul>
   </nav>
 
-
   <h1 id="top">Pong Game</h1>
 
   <section id="information">
@@ -51,34 +51,40 @@
 
   <section id="introduction">
     <h2>Introduction</h2>
-    <p>This project uses an <strong>Arduino Uno</strong>, an <strong>HC-SR04 ultrasonic sensor</strong>, a
-      <strong>passive buzzer</strong>, and <strong>red/yellow/green LEDs</strong> to provide proximity-based
-      alerts, similar to automotive collision detection systems.
+    <p>
+      This project uses 2 <strong>16x8 LED matrices</strong> to create a pong game controlled by 2
+      <strong>joysticks</strong>. The game logic is handled by an <strong>Arduino Uno</strong> board. The casing
+      for this game is made by laser cutting 3mm <strong>acrylic sheets</strong>.
     </p>
   </section>
 
   <section id="circuit-diagram">
     <h2>Circuit Diagram</h2>
-    <p>The ultrasonic sensor measures distance; the Arduino activates LEDs and the buzzer according to distance
-      thresholds.</p>
-    <img src="collision-warning-system-Arduino.jpg" alt="Arduino collision warning system">
+    <p>
+      The following diagrams show how both the joystick and matricies connect to the arduino.
+    </p>
+    <img src="LED Grid.jpg" alt="LED and Joystick Diagram">
   </section>
 
   <section id="environment">
     <h2>Environmental Impact Assessment</h2>
     <ul>
-      <li><strong>Materials:</strong> The Arduino Uno is RoHS and WEEE compliant, limiting hazardous substances.
-      </li>
-      <li><strong>Energy Efficiency:</strong> The circuit draws minimal power (~50 mA at 5V), ideal for USB or
-        solar power.</li>
-      <li><strong>Reusability:</strong> All components are modular and reusable, reducing electronic waste.</li>
-      <li><strong>Packaging & Shipping:</strong> Ordering all components from a single supplier helps minimize
-        carbon footprint.</li>
+      <li><strong>Small Material Footprint:</strong> The project uses only a few small components, which means it requires far 
+        fewer raw materials and produces much less waste than typical electronics. Its compact design reduces plastic, metal, and 
+        manufacturing demand, giving it a much smaller environmental footprint overall.</li>
+      <li><strong>Reusable and Repairable Components:</strong> The project uses modular parts that can be removed, repaired, 
+        or reused, which helps reduce waste and extend the life of each component. This makes the project more sustainable because 
+        parts don’t need to be thrown away and can support future builds.</li>
+      <li><strong>Power efficiency:</strong> LEDs use very little power compared to other display types, allowing the project to run 
+        efficiently while still producing bright visuals. This low energy use reduces electricity consumption and makes the project more 
+        environmentally friendly.</li>
+
     </ul>
   </section>
 
   <section id="bom">
     <h2>Bill of Materials (BoM)</h2>
+
     <table>
       <thead>
         <tr>
@@ -89,62 +95,61 @@
           <th>Source</th>
         </tr>
       </thead>
+
       <tbody>
         <tr>
           <td>Arduino Uno Rev3</td>
           <td>1</td>
-          <td>$27.60</td>
-          <td>$27.60</td>
+          <td>$20.00</td>
+          <td>$20.00</td>
           <td><a href="https://store-usa.arduino.cc/products/arduino-uno-rev3">Arduino Store</a></td>
         </tr>
+
         <tr>
-          <td>HC-SR04 Ultrasonic Sensor</td>
+          <td>8x32 LED Matrix</td>
+          <td>2</td>
+          <td>$25.00</td>
+          <td>$50.00</td>
+          <td><a href="https://url-shortener.me/LFD">8x32 LED Matrix</a></td>
+        </tr>
+
+        <tr>
+          <td>Joysticks</td>
+          <td>2</td>
+          <td>$2.00</td>
+          <td>$4.00</td>
+          <td>Parts Kit</td>
+        </tr>
+
+        <tr>
+          <td>Switch</td>
           <td>1</td>
-          <td>$3.95</td>
-          <td>$3.95</td>
-          <td><a href="https://www.adafruit.com/product/3942">Adafruit</a></td>
+          <td>$1.00</td>
+          <td>$1.00</td>
+          <td>Parts Kit</td>
         </tr>
+
         <tr>
-          <td>Passive Buzzer</td>
+          <td>Power Supply</td>
           <td>1</td>
-          <td>$0.95</td>
-          <td>$0.95</td>
-          <td><a href="https://www.sparkfun.com/passive-buzzer-module.html">SparkFun</a></td>
+          <td>$14.00</td>
+          <td>$14.00</td>
+          <td><a href="https://www.amazon.ca/dp/B09W8X9VGK?ref=cm_sw_r_cp_ud_dp_KXKR8PH8457YR9SXCR5G&ref_=cm_sw_r_cp_ud_dp_KXKR8PH8457YR9SXCR5G&social_share=cm_sw_r_cp_ud_dp_KXKR8PH8457YR9SXCR5G">Power Supply</a></td>
         </tr>
-        <tr>
-          <td>LEDs (Red, Yellow, Green)</td>
-          <td>3</td>
-          <td>$0.20</td>
-          <td>$0.60</td>
-          <td>Adafruit</td>
-        </tr>
-        <tr>
-          <td>220 Ω Resistors</td>
-          <td>3</td>
-          <td>$0.03</td>
-          <td>$0.09</td>
-          <td>Adafruit</td>
-        </tr>
-        <tr>
-          <td>Breadboard</td>
-          <td>1</td>
-          <td>$4.95</td>
-          <td>$4.95</td>
-          <td><a href="https://www.adafruit.com/product/64">Adafruit</a></td>
-        </tr>
+
         <tr>
           <td>Jumper Wires</td>
           <td>1 set</td>
-          <td>$3.50</td>
-          <td>$3.50</td>
-          <td><a href="https://www.sparkfun.com/jumper-wires-standard-7-m-m-30-awg-30-pack.html">SparkFun</a>
-          </td>
+          <td>$2.00</td>
+          <td>$2.00</td>
+          <td>Parts Kit</td>
         </tr>
       </tbody>
+
       <tfoot>
         <tr>
           <td colspan="3">Estimated Total</td>
-          <td>$41.64</td>
+          <td>$92.50</td>
           <td>—</td>
         </tr>
       </tfoot>
@@ -153,92 +158,434 @@
 
   <section id="prototype">
     <h2>Prototype</h2>
-    <p>The following image shows the assembled prototype on a breadboard.</p>
-    <img src="prototype.jpg" alt="Collision warning system prototype">
+    <p>The following image shows the assembled prototype in the printed casing.</p>
+    <img src="IMG_3268.jpeg" alt="Pong Game prototype">
   </section>
 
   <section id="code">
     <h2>Arduino Code</h2>
-    <p>The following Arduino code controls the system, lighting LEDs and activating the buzzer based on distance
-      readings from the HC-SR04 sensor.</p>
+    <p>
+      The following Arduino code manages the Pong game system, controlling the LED matrix display,
+      player inputs, and game logic. It handles paddle movement using the joysticks, updates ball
+      position and collision detection, and continuously refreshes the LED matrix to render smooth gameplay.
+    </p>
 
     <pre class="line-numbers">
-  <button class="copy-btn" onclick="copyCode()">Copy</button>
-  <code id="arduinoCode" class="language-cpp">
-// Collision Warning System with Distance Sensor (HC-SR04)
-// Author: Ana Rodrigues
-// Oct 2, 2025
-// Object is farther than 50cm: Green LED lights up
-// Object is closer than 50 cm, but more than 10cm away: Yellow LED lights, buzzer plays 300Hz tone
-// Object is closer than 10cm: Red LED lights up, buzzer plays 500Hz tone
+      <button class="copy-btn" onclick="copyCode()">Copy</button>
+      <code id="arduinoCode" class="language-cpp">
+//Main Game Logic
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_NeoMatrix.h&gt;
+#include &lt;Adafruit_NeoPixel.h&gt;
+#include &lt;Arduino.h&gt;
+#include &lt;stdint.h&gt;
+#include "game.h"
 
-//LED pins
-const int greenLED = 2;
-const int yellowLED = 3;
-const int redLED = 4;
+char debug_field[16][32] = {};
 
-// Ultrasonic sensor pins
-const int trigPin = 9;
-const int echoPin = 10;
+void run_game(Adafruit_NeoMatrix *matrix)
+{
 
-// Passive buzzer pin
-const int buzzer = 11;
+  Game_settings game_settings{
+      0, 0, 0, 0, 0};
 
-void setup() {
-  pinMode(greenLED, OUTPUT);
-  pinMode(yellowLED, OUTPUT);
-  pinMode(redLED, OUTPUT);
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  Serial.begin(9600);
-}
+  Ball ball = {3,
+               3,
+               1.2,
+               0.7};
+  uint8_t game_end = 0;
+  uint8_t next_cycle_ready = 1;
 
-void loop() {
-  // Measure distance
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
+  Joystick joystick_right{
+      1, 0, 0, 0};
 
-  long duration = pulseIn(echoPin, HIGH);
-  long distance = duration * 0.034 / 2;
+  Joystick joystick_left{
+      0, 0, 0, 0};
 
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
-  
-  //Error in measurement:
-  if (distance <= 0)
-    return;
+  Paddle paddle_left{
+      1.0f, 6.0f};
 
-  //Too close:
-  if (distance <= 10) {
-    digitalWrite(greenLED, LOW);
-    digitalWrite(yellowLED, LOW);
-    digitalWrite(redLED, HIGH);
-    tone(buzzer, 500); // Play 500Hz tone
-    return;
+  Paddle paddle_right{
+      30.0f, 6.0f};
+
+  // display settings
+  run_main_menu(matrix, &joystick_left, &joystick_right, &ball, &game_settings);
+
+  reset_ball(&ball, &game_settings);
+
+  // main game loop
+  while (1)
+  {
+
+    if ((game_settings.left_score >= game_settings.max_score) || (game_settings.right_score >= game_settings.max_score))
+    {
+      break;
+    }
+
+    matrix->fillScreen(0);
+
+    clear_debug_field(debug_field);
+
+    matrix->drawRect(0, 0, FIELD_WIDTH, FIELD_HEIGHT, FIELD_OUTLINE_COLOR);
+
+    if (game_settings.scored)
+    {
+      show_score(matrix, &game_settings);
+      reset_ball(&ball, &game_settings);
+    }
+
+    read_joysticks(&joystick_left);
+    read_joysticks(&joystick_right);
+
+    update_paddle(&paddle_left, &joystick_left);
+    update_paddle(&paddle_right, &joystick_right);
+
+    update_ball(&ball, &paddle_left, &paddle_right, &game_settings);
+
+    draw_paddle(matrix, &paddle_left);
+    draw_paddle(matrix, &paddle_right);
+
+    draw_ball(matrix, &ball);
+
+    draw_debug_field(debug_field);
+
+    matrix->show();
+
+    while (!next_cycle_ready)
+    {
+    }
+    delay(30);
   }
 
-  //Midrange:
-  if (distance <= 30) {
-    digitalWrite(greenLED, LOW);
-    digitalWrite(yellowLED, HIGH);
-    digitalWrite(redLED, LOW);
-    tone(buzzer, 300); // Play 300Hz tone
-    return;
+  // display game over with score
+  display_game_over(matrix);
+
+  // Serial.println("Game Over");
+
+  delay(5000);
+}
+
+void reset_ball(Ball *ball, Game_settings *game_settings)
+{
+  // range of speeds for the ball 0.1 to 0.5
+
+  // vy/vx < 0.5
+  //
+
+  float rnd = random(15, 35);
+
+  float square = ((float)game_settings->game_speed * game_settings->game_speed);
+
+  float vertical_comp = rnd / 100.0f * square;
+  float horizontal_comp = square - vertical_comp;
+
+  ball->xv = (sqrt(horizontal_comp) / 255 * BALL_MAX_SPEED);
+  ball->yv = (sqrt(vertical_comp) / 255 * BALL_MAX_SPEED);
+
+  if (game_settings->scored == 2) // going left
+  {
+    ball->xv = -ball->xv;
   }
 
-  //Normal status:
-  digitalWrite(greenLED, HIGH);
-  digitalWrite(yellowLED, LOW);
-  digitalWrite(redLED, LOW);
-  noTone(buzzer); // stop buzzer
+  game_settings->scored = 0;
 
-  delay(100);
+  rnd = random(0, 50);
+
+  if (rnd < 25)
+  {
+    ball->yv = -ball->yv;
+  }
+
+  ball->x = 16;
+  ball->y = 8;
 }
-    </code></pre>
+
+void update_ball(Ball *ball, Paddle *paddle_l, Paddle *paddle_r, Game_settings *game_settings)
+{
+
+  ball->x += ball->xv;
+  ball->y += ball->yv;
+
+  // check for walls
+
+  // right paddle collision
+  if (ball->x > paddle_r->x &&                                                 // if right paddle hit
+      (uint8_t)(ball->y + 0.5f) <= (uint8_t)(paddle_r->y + PADDLE_SIZE + 0.5f) // y < paddle max y
+      && (uint8_t)(ball->y + 0.5f) >= (uint8_t)(paddle_r->y + 0.5f)            // y > paddle y
+  )
+  {
+    ball->x = paddle_r->x - (ball->x - paddle_r->x);
+    ball->xv = -(ball->xv); // bounce off
+  }
+
+  // left paddle
+  if (ball->x < paddle_l->x &&                                                 // if left paddle hit
+      (uint8_t)(ball->y + 0.5f) <= (uint8_t)(paddle_l->y + PADDLE_SIZE + 0.5f) // y < paddle max y
+      && (uint8_t)(ball->y + 0.5f) >= (uint8_t)(paddle_l->y + 0.5f)            // y > paddle y
+  )
+  {
+    ball->x = paddle_l->x + (paddle_l->x - ball->x);
+    ball->xv = -(ball->xv);
+  }
+
+  if (ball->x > FIELD_WIDTH_INDX) // hit right wall
+  {
+    ball->x = FIELD_WIDTH_INDX - (ball->x - FIELD_WIDTH_INDX);
+    ball->xv = -(ball->xv); // plus random
+
+    game_settings->scored = 2;
+    game_settings->left_score++;
+  }
+  else if (ball->x < FIELD_START_INDX) // hit left wall
+  {
+    ball->x = -(ball->x);
+    ball->xv = -(ball->xv);
+
+    game_settings->right_score++;
+    game_settings->scored = 1;
+  }
+
+  if (ball->y > FIELD_HEIGHT_INDX)
+  {
+
+    ball->y = FIELD_HEIGHT_INDX - (ball->y - FIELD_HEIGHT_INDX);
+    ball->yv = -(ball->yv);
+  }
+  else if (ball->y < FIELD_START_INDX)
+  {
+    ball->y = -(ball->y);
+    ball->yv = -(ball->yv);
+  }
+}
+
+void draw_ball(Adafruit_NeoMatrix *matrix, Ball *ball)
+{
+  matrix->drawPixel((uint16_t)(ball->x + 0.5f), (uint16_t)(ball->y + 0.5f), BALL_COLOR);
+  // debug
+  debug_field[(uint8_t)(ball->y + 0.5f)][(uint8_t)(ball->x + 0.5f)] = '*';
+}
+
+void read_joysticks(Joystick *joystick)
+{
+  joystick->prev_state = joystick->current_state;
+
+  if (joystick->is_right == 1)
+  {
+    joystick->x = analogRead(JOYSTICK_RIGHT_X);
+    joystick->y = analogRead(JOYSTICK_RIGHT_Y);
+    joystick->current_state = !digitalRead(JOYSTICK_RIGHT_BTN);
+  }
+  else
+  {
+    joystick->x = analogRead(JOYSTICK_LEFT_X);
+    joystick->y = analogRead(JOYSTICK_LEFT_Y);
+    joystick->current_state = !digitalRead(JOYSTICK_LEFT_BTN);
+  }
+
+  if (joystick->current_state && !joystick->prev_state)
+  {
+    joystick->pressed = 1;
+  }
+  else
+  {
+    joystick->pressed = 0;
+  }
+}
+
+void update_paddle(Paddle *paddle, Joystick *joystick)
+{
+
+  if (joystick->x < 505 || joystick->x > 510)
+  {
+    float paddle_new_position = paddle->y + ((joystick->x / 1024.0f - 0.5f) * JOYSTICK_RESPONSIVNESS);
+
+    if (paddle_new_position > 0 && paddle_new_position < FIELD_HEIGHT_INDX - PADDLE_SIZE)
+    {
+      paddle->y = paddle_new_position;
+    }
+  }
+}
+
+void draw_paddle(Adafruit_NeoMatrix *matrix, Paddle *paddle)
+{
+  matrix->drawLine(paddle->x, (paddle->y + 0.5f), paddle->x, (paddle->y + PADDLE_SIZE + 0.5f), PADDLE_COLOR);
+
+  // debug
+  //
+  int x = paddle->x;
+  int y0 = (int)(paddle->y + 0.5f);
+  int y1 = (int)(paddle->y + PADDLE_SIZE + 0.5f);
+
+  for (int y = y0; y <= y1; y++)
+  {
+    if (y >= 0 && y < 16)
+    {
+      debug_field[y][x] = '#';
+    }
+  }
+}
+
+void show_score(Adafruit_NeoMatrix *matrix, Game_settings *game_settings)
+{
+  matrix->fillScreen(0);
+
+  matrix->drawRect(0, 0, FIELD_WIDTH, FIELD_HEIGHT, FIELD_OUTLINE_COLOR);
+  matrix->drawFastVLine(16, 0, 16, FIELD_OUTLINE_COLOR);
+  matrix->setTextColor(RED);
+
+  matrix->setCursor(2, 1);
+  matrix->print(game_settings->left_score);
+  matrix->setCursor(3, 8);
+  matrix->print(game_settings->right_score);
+
+  matrix->show();
+
+  delay(1500);
+}
+
+void run_main_menu(Adafruit_NeoMatrix *matrix, Joystick *joystick_left, Joystick *joystick_right, Ball *ball, Game_settings *game_settings)
+{
+  float speed = 0;
+  float max_scores = 0;
+  uint8_t display_num = 0;
+  uint8_t start_game = 0;
+
+  while (1)
+  {
+    matrix->fillScreen(0);
+
+    matrix->drawRect(0, 0, FIELD_WIDTH, FIELD_HEIGHT, FIELD_OUTLINE_COLOR);
+
+    read_joysticks(joystick_left);
+    read_joysticks(joystick_right);
+
+    float value = -((joystick_right->x / 1024.0f - 0.5f) * JOYSTICK_RESPONSIVNESS_MENU);
+
+    if (joystick_right->pressed)
+    {
+      display_num++;
+    }
+
+    if (display_num == 0) // displaying number of scores select
+    {
+      matrix->setTextColor(RED);
+      matrix->setCursor(2, 6);
+      matrix->print(F("S:"));
+      matrix->setCursor(3, 6);
+      matrix->print((uint8_t)(max_scores + 0.5f));
+
+      if (((uint8_t)(max_scores + 0.5f) < 255 && value > 0.01) || ((uint8_t)(max_scores + 0.5f) > 0 && value < -0.01))
+      {
+        max_scores += value;
+      }
+    }
+    else if (display_num == 1) // displaying speed select
+    {
+
+      // displaying number of scores select
+      matrix->setTextColor(RED);
+      matrix->setCursor(2, 6);
+      matrix->print(F("V:"));
+      matrix->setCursor(3, 6);
+      matrix->print((uint8_t)(speed + 0.5f));
+
+      if (((uint8_t)(speed + 0.5f) < 255 && value > 0.01) || ((uint8_t)(speed + 0.5f) > 0 && value < -0.01))
+      {
+        speed += value;
+      }
+    }
+    else if (display_num == 2) // saving data and returning
+    {
+      game_settings->game_speed = (uint8_t)(speed + 0.5f);
+      game_settings->max_score = (uint8_t)(max_scores + 0.5f);
+      game_settings->left_score = 0;
+      game_settings->right_score = 0;
+      start_game = 1;
+    }
+
+    matrix->show();
+
+    if (start_game)
+    {
+      break;
+    }
+
+    delay(30);
+  }
+}
+
+void display_game_over(Adafruit_NeoMatrix *matrix)
+{
+  matrix->fillScreen(0);
+  matrix->setTextColor(RED);
+  matrix->setCursor(2, 4);
+  matrix->print(F("END"));
+  matrix->drawRect(0, 0, 32, 16, FIELD_OUTLINE_COLOR);
+  matrix->show();
+}
+
+void test_screen(Adafruit_NeoMatrix *matrix)
+{
+
+  const static uint16_t colors[] = {
+      matrix->Color(255, 0, 0), matrix->Color(0, 255, 0), matrix->Color(0, 0, 255)};
+
+  static int x = matrix->width();
+  static int pass = 0;
+
+  matrix->fillScreen(0);
+  matrix->setCursor(x, 4);
+  matrix->print(F("Howdy"));
+  if (--x < -36)
+  {
+    x = matrix->width();
+    if (++pass >= 3)
+      pass = 0;
+    matrix->setTextColor(colors[pass]);
+  }
+  matrix->drawLine(0, 0, 32, 16, 0xff00);
+  matrix->drawRect(0, 0, 32, 16, 0xff00);
+  matrix->show();
+  delay(15);
+}
+
+void draw_debug_field(char field[16][32])
+{
+  for (uint8_t i = 0; i < 16; i++)
+  {
+    for (uint8_t j = 0; j < 32; j++)
+    {
+      if (field[i][j])
+      {
+        // Serial.print(field[i][j]);
+      }
+      else
+      {
+        //  Serial.print(".");
+      }
+      // Serial.print(" ");
+    }
+    //  Serial.println();
+  }
+  // Serial.println("\n\n");
+}
+
+void clear_debug_field(char field[16][32])
+{
+  for (uint8_t i = 0; i < 16; i++)
+  {
+    for (uint8_t j = 0; j < 32; j++)
+    {
+      field[i][j] = 0;
+    }
+  }
+}
+
+      </code>
+
+
+      
+    </pre>
 
     <script>
       function copyCode() {
@@ -251,78 +598,280 @@ void loop() {
   </section>
 
 
+    <section id="code">
+
+    <pre class="line-numbers">
+      <button class="copy-btn" onclick="copyCode()">Copy</button>
+      <code id="arduinoCode" class="language-cpp">
+//Sets up all the components needed to run a Pong game on LED matrices with joysticks.
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_NeoMatrix.h&gt;
+#include &lt;Adafruit_NeoPixel.h&gt;
+#include &lt;stdint.h&gt;
+
+#define RED (uint16_t)0xf800
+#define BALL_COLOR 0xf800
+#define FIELD_OUTLINE_COLOR 0xff00
+#define PADDLE_COLOR 0xf800
+#define TEXT_COLOR 0xf800
+
+#define FIELD_WIDTH 32
+#define FIELD_HEIGHT 16
+
+#define FIELD_WIDTH_F 32.0f
+#define FIELD_HEIGHT_F 16.0f
+
+#define FIELD_START_INDX 0.0f
+#define FIELD_WIDTH_INDX (FIELD_WIDTH_F - 1.0f)
+#define FIELD_HEIGHT_INDX (FIELD_HEIGHT_F - 1.0f)
+
+#define JOYSTICK_RESPONSIVNESS 0.5f
+#define JOYSTICK_RESPONSIVNESS_MENU 1.0f
+
+#define BALL_MAX_SPEED 1.0f
+
+#define PADDLE_SIZE 4.0f
+
+#define JOYSTICK_RIGHT_X A2
+#define JOYSTICK_RIGHT_Y A3
+#define JOYSTICK_RIGHT_BTN 2
+
+#define JOYSTICK_LEFT_X A1
+#define JOYSTICK_LEFT_Y A2
+#define JOYSTICK_LEFT_BTN 3
+
+typedef struct
+{
+  float x, y;
+  float xv, yv;
+} Ball;
+
+typedef struct
+{
+  float x, y, v;
+} Paddle;
+
+typedef struct
+{
+  int8_t is_right;
+  int16_t x, y;
+  uint8_t current_state;
+  uint8_t prev_state;
+  uint8_t pressed;
+} Joystick;
+
+typedef struct
+{
+  uint8_t left_score;
+  uint8_t right_score;
+  uint8_t max_score;
+  uint8_t game_speed;
+  uint8_t scored;
+} Game_settings;
+
+void run_game(Adafruit_NeoMatrix *matrix);
+
+void reset_ball(Ball *ball, Game_settings *game_settings);
+
+void update_ball(Ball *ball,  Paddle * paddle_l, Paddle * paddle_r, Game_settings *game_settings);
+
+void draw_ball(Adafruit_NeoMatrix *matrix, Ball *ball);
+
+void read_joysticks(Joystick *joystick);
+
+void update_paddle(Paddle *paddle, Joystick *joystick);
+
+void draw_paddle(Adafruit_NeoMatrix *matrix, Paddle *paddle);
+
+void run_main_menu(Adafruit_NeoMatrix *matrix, Joystick *joystick_left, Joystick *joystick_right, Ball *ball, Game_settings *game_settings);
+
+void show_score(Adafruit_NeoMatrix *matrix, Game_settings *game_settings);
+
+void display_game_over(Adafruit_NeoMatrix *matrix);
+
+void test_screen(Adafruit_NeoMatrix *matrix);
+
+void draw_debug_field(char field[16][32]);
+
+void clear_debug_field(char field[16][32]);
+
+      </code>
+
+
+      
+    </pre>
+
+    <script>
+      function copyCode() {
+        const code = document.getElementById('arduinoCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          alert('Code copied to clipboard!');
+        });
+      }
+    </script>
+  </section>
+
+     <section id="code">
+
+    <pre class="line-numbers">
+      <button class="copy-btn" onclick="copyCode()">Copy</button>
+      <code id="arduinoCode" class="language-cpp">
+
+//Initializes display and joysticks
+
+// Adafruit_NeoMatrix example for tiled NeoPixel matrices.  Scrolls
+// 'Howdy' across three 10x8 NeoPixel grids that were created using
+// NeoPixel 60 LEDs per meter flex strip.
+
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_NeoMatrix.h&gt;
+#include &lt;Adafruit_NeoPixel.h&gt;
+#include "stdint.h"
+#include "game.h"
+
+#define PIN 10
+
+// MATRIX DECLARATION:
+// Parameter 1 = width of EACH NEOPIXEL MATRIX (not total display)
+// Parameter 2 = height of each matrix
+// Parameter 3 = number of matrices arranged horizontally
+// Parameter 4 = number of matrices arranged vertically
+// Parameter 5 = pin number (most are valid)
+// Parameter 6 = matrix layout flags, add together as needed:
+//   NEO_MATRIX_TOP, NEO_MATRIX_BOTTOM, NEO_MATRIX_LEFT, NEO_MATRIX_RIGHT:
+//     Position of the FIRST LED in the FIRST MATRIX; pick two, e.g.
+//     NEO_MATRIX_TOP + NEO_MATRIX_LEFT for the top-left corner.
+//   NEO_MATRIX_ROWS, NEO_MATRIX_COLUMNS: LEDs WITHIN EACH MATRIX are
+//     arranged in horizontal rows or in vertical columns, respectively;
+//     pick one or the other.
+//   NEO_MATRIX_PROGRESSIVE, NEO_MATRIX_ZIGZAG: all rows/columns WITHIN
+//     EACH MATRIX proceed in the same order, or alternate lines reverse
+//     direction; pick one.
+//   NEO_TILE_TOP, NEO_TILE_BOTTOM, NEO_TILE_LEFT, NEO_TILE_RIGHT:
+//     Position of the FIRST MATRIX (tile) in the OVERALL DISPLAY; pick
+//     two, e.g. NEO_TILE_TOP + NEO_TILE_LEFT for the top-left corner.
+//   NEO_TILE_ROWS, NEO_TILE_COLUMNS: the matrices in the OVERALL DISPLAY
+//     are arranged in horizontal rows or in vertical columns, respectively;
+//     pick one or the other.
+//   NEO_TILE_PROGRESSIVE, NEO_TILE_ZIGZAG: the ROWS/COLUMS OF MATRICES
+//     (tiles) in the OVERALL DISPLAY proceed in the same order for every
+//     line, or alternate lines reverse direction; pick one.  When using
+//     zig-zag order, the orientation of the matrices in alternate rows
+//     will be rotated 180 degrees (this is normal -- simplifies wiring).
+//   See example below for these values in action.
+// Parameter 7 = pixel type flags, add together as needed:
+//   NEO_RGB     Pixels are wired for RGB bitstream (v1 pixels)
+//   NEO_GRB     Pixels are wired for GRB bitstream (v2 pixels)
+//   NEO_KHZ400  400 KHz bitstream (e.g. FLORA v1 pixels)
+//   NEO_KHZ800  800 KHz bitstream (e.g. High Density LED strip)
+
+// Example with three 10x8 matrices (created using NeoPixel flex strip --
+// these grids are not a ready-made product).  In this application we'd
+// like to arrange the three matrices side-by-side in a wide display.
+// The first matrix (tile) will be at the left, and the first pixel within
+// that matrix is at the top left.  The matrices use zig-zag line ordering.
+// There's only one row here, so it doesn't matter if we declare it in row
+// or column order.  The matrices use 800 KHz (v2) pixels that expect GRB
+// color data.
+Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(32, 8, 1, 2, PIN,
+                                               NEO_TILE_TOP + NEO_TILE_ROWS + NEO_TILE_ZIGZAG + NEO_MATRIX_TOP + NEO_MATRIX_LEFT + NEO_MATRIX_COLUMNS + NEO_MATRIX_ZIGZAG,
+                                               NEO_GRB + NEO_KHZ800);
+
+void setup()
+{
+
+  pinMode(JOYSTICK_RIGHT_BTN, INPUT);
+  pinMode(JOYSTICK_LEFT_BTN, INPUT);
+
+  randomSeed(analogRead(A5));
+  Serial.begin(9600);
+  while (!Serial)
+  {
+    ; // wait
+  }
+  matrix.begin();
+  matrix.setTextWrap(false);
+  matrix.setBrightness(10);
+  matrix.setTextColor(TEXT_COLOR);
+}
+
+void loop()
+{
+
+  while (1)
+  {
+    run_game(&matrix);
+  }
+
+  test_screen(&matrix);
+}
+
+
+      </code>
+
+
+      
+    </pre>
+
+    <script>
+      function copyCode() {
+        const code = document.getElementById('arduinoCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          alert('Code copied to clipboard!');
+        });
+      }
+    </script>
+  </section>
+
 
   <section id="conclusion">
     <h2>Conclusion</h2>
-    <p>The system effectively demonstrates distance-based alerting using Arduino. It’s affordable, educational, and
-      sustainable through reusable components.</p>
+    <p>
+      The Pong game functions smoothly and successfully showcases the core mechanics of
+      classic arcade gameplay. It demonstrates effective use of programming logic, collision
+      detection, and user interaction.
+    </p>
   </section>
 
- <section id="references">
-  <h2>References</h2>
-  <p>
-    The following external resources and example projects demonstrate related Arduino applications 
-    using ultrasonic distance sensors, passive buzzers, and multicolour LEDs:
-  </p>
+  <section id="references">
+    <h2>References</h2>
+    <p>
+      The following external resources showcase related Arduino projects that 
+      incorporate LED matrices, joystick control, and custom enclosure designs.
+    </p>
 
-  <ul>
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Ultrasonic sensor projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor
-      </a>
-    </li>
+    <ul>
+      <li>
+        Arduino Blog. (2022).
+        <em>Recreating Pong with an LED matrix.</em>
+        <a href="https://blog.arduino.cc/2022/10/18/recreating-pong-with-an-led-matrix/" target="_blank"
+          rel="noopener nprojectsoreferrer">https://blog.arduino.cc/2022/10/18/recreating-pong-with-an-led-matrix/</a>
+      </li>
 
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Buzzer projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://create.arduino.cc/projecthub/projects/tags/buzzer" target="_blank" rel="noopener noreferrer">
-        https://create.arduino.cc/projecthub/projects/tags/buzzer
-      </a>
-    </li>
+      <li>
+        Instructables. (2019).
+        <em>8X16 LED Matrix Pong Game.</em>
+        <a href="https://www.instructables.com/LED-Pong-1/" target="_blank"
+          rel="noopener noreferrer">https://www.instructables.com/LED-Pong-1/</a>
+      </li>
 
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>LED projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/led" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/led
-      </a>
-    </li>
+      <li>
+        Jeremy S Cook. (2021).
+        <em>Arduino LED Matrix Tutorial: Getting Started with Addressable LED Matricies.</em>
+        <a href="https://www.arrow.com/en/research-and-events/articles/getting-started-with-addressable-led-matrices" target="_blank"
+          rel="noopener noreferrer">https://www.arrow.com/en/research-and-events/articles/getting-started-with-addressable-led-matrices</a>
+      </li>
 
-    <li>
-      Instructables. (n.d.). 
-      <em>Distance measurement using ultrasonic sensor.</em> 
-      Instructables. 
-      <a href="https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/" target="_blank" rel="noopener noreferrer">
-        https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/
-      </a>
-    </li>
-
-    <li>
-      Circuit Basics. (n.d.). 
-      <em>How to use an ultrasonic sensor with Arduino.</em> 
-      Circuit Basics. 
-      <a href="https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/" target="_blank" rel="noopener noreferrer">
-        https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/
-      </a>
-    </li>
-
-    <li>
-      Last Minute Engineers. (n.d.). 
-      <em>Ultrasonic sensor tutorial.</em> 
-      Last Minute Engineers. 
-      <a href="https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/" target="_blank" rel="noopener noreferrer">
-        https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/
-      </a>
-    </li>
-  </ul>
-</section>
-
-
+      <li>
+        Maker Lessons. (n.d.).
+        <em>Learn Onshape: Design A Simple Laser Cut Box in Under 5 Minutes.</em>
+        <a href="https://www.youtube.com/watch?v=YfDmlx2LpFo"
+          target="_blank" rel="noopener noreferrer">
+          https://www.youtube.com/watch?v=YfDmlx2LpFo
+        </a>
+      </li>
+    </ul>
+  </section>
 
 </body>
 
